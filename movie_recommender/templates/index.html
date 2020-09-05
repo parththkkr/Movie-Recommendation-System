@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{%block title%}{%endblock%}
+{%block content%}
+<marquee behavior="alternate"><h1>we will recommend you movies by your liked movies</h1></marquee>
+<form action="recommendation" method="get">{% csrf_token %}
+
+<table>
+    <tr>
+        <h2>Movie:<input type="text" style="height: 30px;font-size: 22px"name="movie_user_likes" placeholder="Enter Name of movie" required></h2>
+        <h2>Number of similar movies you want:<input type="number" style="height: 30px;font-size: 22px" name="no_of_movie" placeholder="Enter number of movies"></h2>
+    <h4><input type="submit" value="search"  style="height: 32px;width: 113px;font-size: 20px;"
+}></h4>
+    </tr>
+</table>
+
+</form>
+{%endblock%}
